@@ -1,24 +1,40 @@
-<title>lzma decoder</title><style>pre{border:1px solid #8f8;background:#cfc}iframe,textarea{width:100%;display:block}iframe{height:3em;background:#eee}textarea{height:9em;background:#222;color:#ccc}</style>
-<h1>tiny code of LZMA decoder</h1>
-<h2>limited version</h2>
--eos option must be enabled when compress file(lzma.exe e infile outile.lzma -eos)
+<title>LZMA decoder</title><style>
+pre{border:1px solid #8f8;background:#cfc}
+iframe{height:3em;background:#ddd}
+iframe,textarea{width:100%;display:block}
+textarea{height:9em;background:#ccc;color:#333;padding:.5em}
+em{border:1px solid #222;background:#bbb;color:#333}</style>
+<h1>Tiny code of LZMA decoder</h1>
+<h2>Limited version</h2>
+-eos option must be enabled when compress file(<em>lzma.exe e infile outile -eos </em>)
 <pre>usage:
 function f(u)
 @u: Array/Uint8Array
 @return: Array Object
 
 //example
-var a=f([93,6,0,0,0,6,0,0,0,0,0,0,0,0,49,24,74,32,179,227,228,65,223,139,255,251,145,64])
+var a=f([93,6,0,0,0,255,255,255,255,255,255,255,255,0,49,24,74,32,179,227,228,65,223,139,255,251,145,64])
 console.log(a)//[98,97,110,97,110,97]</pre>
-<p>decoder size is only 818 bytes. function name is f.
-<textarea id=a>for(f='r(Xk=W>>>VhVU:1T--S):Rp+~bQdV5,Pb,b=O>a?Na=7NM256;L,j=tK-=J+=I||(H=1G<<FGFeEfoXD;D;C1)B1B,A++]@1,f[,d);f(e=16+c=c,;d<L)],a)?(l=o[p@=a*d))=v,v=Ou[a]S;):X3*ielse{return 	,n=nF8|s[i@dId+)Dl)>e;bIcFe++)=6d,U24HhF=8=(u,a,c)=>{var d=W0)?B?X8,B26B+85AkI2,Mfu[0d/9,fHG024d*(UAc>nV0?(h=I2048-P0R(hJnJJPB	c},raCau+c	d^E},s=u,t,v,w=d%9,j,l,n,mE/5,gE%5,p=d=a=0,b,o=[hG6|gSF8,iG8-h,kChh]=[]C;d=p&m-B1{W0a))234jKRt,t=vReeR(W!5&&(M9:AkH98T187T0K,tX76,6>k?k-2F6T92b>3)u=bVO(2|b&BFSuG4>c)Dl=b+31-c;u+lD;4<uU=n-U3nJh&S-cDbIdF4G;4b<0)	o}}DQ;ko[e@}l=(lV8-w|(p&g)Fw)dG;7>a;Do[Q]WeV7&eF==l|k+1F8),c^k}d-LaJ4NaT0N3:6}}';_=/[-@-X]/.exec(f);)with(f.split(_))f=join(shift());eval(f)</textarea>
-<p>html+js 1017 bytes
-<textarea id=t><input id=b type=file><script>for(f='256;q>a?pa=7p`A=_--Z+]Y-=X5,W>>>VhVT0)St,t=vQArrayP=1N<<MNMeKr(JfoJI;I;H||(GreE1,Df[Cc=$e=#16+"],a*"d))new 1));f(i;d<q),dc,=d=o[F+=b,b=a)?(Z;):J3*"n=nM8|s[i+YEturn =(u,a,c)=>{var d=else{	u[a]CUint8P(d++)Il)>e;b+=cMe++)=$6],T24GhM=8,_S??"J8,26+851,A+=2,`b.onchangewith(FileReader)EadAsPBuffeJb.files[0]),onloadd.hEf=URL.cEateObjectURL(Blob([Esult),S)]))}};f,e/9,fGN024c*(T1,$c>nV0?(h=+=2048-dVWS:(hXnX-VWc},rD#aHau+cd^K},s=u,t,v,w%9,j,l,n,BK/WgK%WF=0,b,o=[hN6|gZM8,iN8-h,AHhCh]=[H;d=F&B-1{#_0a))234#j,j=t):#Q):#v,ve):(_!5&&(`9:1,AG$C98:11	$C87:10,j=Q,vJC76,6>A?A-2M6:192b>3)u=bVDc(2|b&MZuN4>c)Il=b+31-c;u+l	I;4<uT=D$n-T3DnXh&Z-cIb+M4N;4b<So}}I#F+~b;AlY=o[e+Y}	l=C"(lV8-w|(F&g)Mw)]N;7>a;	Ie~b]_eV7&DeM=D=$l|A+1M8),c^A}lY-qaX4pa:10p3:6}}';_=/[^ !%-BFLORU[-^a-or-~]/.exec(f);)with(f.split(_))f=join(shift());eval(f)</script><a id=d>DL</textarea>
-<p>test. right click to download file when process is done. target is 'DL'<iframe src=about:blank id=i0></iframe>
-<h2>more compatible version of original LZMA</h2>
-<p>decoder 854 bytes. not requires -eos option. uncompressed file size limit is 2<sup>53</sup>bytes.
-<textarea>for(f=':1Xk=W--Vr(U):T>>>ShSR256;Qd<Q)Pp+~bO>a?Na=7NMb,b=L,j=tKdS5,J-=I=1H<<GHGeF++]E1)D1D,C||(B1,Af[@,dfoU;+=);f(e=16+c,c=],a)?(l=o[pE==v,v=La*d))V;)u[a]:U3*ielse{,n=nG8|s[iE	dd+@return )Pl)>e;bcGe++)=6d,R24BhG=8	=(u,a,c)=>{var d=W0)?D?U8,D26D+85Ck2,Mfu[0d/9,fBH024d*(RCc>nS0?(h=2048-J0T(hInIIJDc},rAa;au+cd^F},s=u,t,v,q=d%9,j,l,n,mF/5,gF%5,p=a=d=u=0,w=0,b,o=[hH6|gVG8,iH8-h,kH;h@h]=[]	;7>u;)ws[u+++5]*k,k*=Qp<w;d=p&m-D1{W0a))234jKTt,t=vTeeT(W!5&&(M9:CkB@98X1@87X0K,tU@76,6>k?k-2G6X92b>3)u=bSAL(2|b&DGVuH4>c)l=b+31-c;u+l4<uR=An-R3AnIh&V-cbdG4H;4b<0)o}}O;ko[eE}l=@(lS8-q|(p&g)Gq)dH;7>a;o[O];PWeS7&AeG=A=l|k+1G8),c^k}d-QaI4NaX0N3:6}o}';_=/[-@-X]/.exec(f);)with(f.split(_))f=join(shift());eval(f)</textarea>
-<p>html+js 1054 bytes
-<textarea id=u><input id=b type=file><script>for(f=':1zA=x--q>>>phpm0)k256;`d<`)_F+~bZ>a?Ya=7YXb,b=W,j=tVdp5,T-=Sr(QreP=1N<<MNMeK++]J1)I1I,H||(GArrayE1,Df[C,d$foQ##;"+=);f(ie=16+new c,c=],l=o[FJ==v,v=Wq;)a*d))a)?(:Q3$*Cu[a]else{=(u,a,c)=>{var d=	,n=nM8|s[iJUint8E(dd+Pturn )"_l$)>e;bcMe++)=6d,m24GhM=8xk?I?Q8,I26I+85HA2,Xb.onchangewith(FileReader)PadAsEBuffeQb.files[0]),onloadd.hPf=URL.cPateObjectURL(Blob([Psult),k)]))}};f	,d/9,f	GN024d*(mHc>np0?(h=2048-Tk:(hSnSSTIc},r	Da;"au$+cd^K},s=u,t,v,w=d%9,j,l,n,BK/5,gK%5,F=d=u=0,L=0,b,o=[hN6|gqM8,iN8-h,AN;"hCh]=[];"u<7;)Ls[u+++5]*A,A*=`"F<L;d=F&B-I1{x0a))234jV):t,t=v):ee):(x!5&&(X9:HAGC98z1C87z0V,tQC76,6>A?A-2M6z92b>3)u=bpDW(2|b&IMqu$N4>c)#l=b+31-c;u+l"4<um=Dn-m3DnSh&q-c#bdM4$N;4b<ko}}#Z;Ao[eJ}l=C(lp8-w|(F&g)Mw)dN;7>a;#o[Z];_xep7&DeM=D=l$|A+1M8),c^A}d-`aS4Yaz0Y3:6}o}';_=/[^ !%-BFLORU[-^a-jlnor-wy{-~]/.exec(f);)with(f.split(_))f=join(shift());eval(f)</script><a id=d>DL</textarea>
-<p>test<iframe src=about:blank id=i1></iframe>
-<script>((a,b)=>{for(b of["t","u"])with(self["i"+a++].contentWindow.document)open(),close(write(self[b].value))})(0)</script>
+<p>decoder size is only 816 bytes. function name is f.
+<textarea id=a>for(f='r(Yk=X>>>WhWV:1U--T):Sp+~bRdW5,Qb,b=P>a?Oa=7ONa=0,M256;L,j=tK-=J+=I||(H=1G<<FGFeEfoYD;D;C1)B1B,A++]@1,f[],);f(e=c,16+c=,d;d<L)l=o[p@==v,v=PT;)a*d))a)?(:Y3*iu[a]else{return 	,n=nF8|s[i@dId+)Dl)>e;bIcFe++)=6],V24HhF=8=(u,Mc)=>{var d=Xc)?B?Y8,B26B+85AkI2,Nf,d/9,fHG024d*(VAc>nW0?(h=I2048-Q0S(hJnJJQB	c},raCau+c	d^E},s=u,t,v,w=d%9,j,l,n,mE/5,gE%5,p=d=Mb,o=[hG6|gTF8,iG8-h,kChh]=[]C;d=p&m-B1{X0a))234jKSt,t=vSeeS(X!5&&(N9:AkH98U187U0K,tY76,6>k?k-2F6U92b>3)u=bWP(2|b&BFTuG4>c)Dl=b+31-c;u+lD;4<uV=n-V3nJh&T-cDbIdF4G;4b<0)	o}}DR;ko[e@}l=(lW8-w|(p&g)Fw)]G;7>a;Do[R]XeW7&eF==l|k+1F8),c^k}d-LaJ4OaU0O3:6}}';_=/[-@-Y]/.exec(f);)with(f.split(_))f=join(shift());eval(f)</textarea>
+<p>html+js 994 bytes
+<textarea id=t><input id=b type=file><script>for(f='>>>qhqpA=m:1k--`):_rrayZnew Ydq5,X>a?Wa=7WVL+~bT256;S,j=tQ))Pr(N-=M+=K||(J=1I<<HIHeGfoNF;F;E1)D1D,C++]$1,#f["],f(ic,16+);e=c=,d;d<S)l=o[L$==v,v=b,b=`;)a*dPa)?(:N3*"u[a]else{return ,n=nH8|s[i$	YUint8AZ(dKd+(u,a=0,c)=>={var d=)Fl)>e;bKcHe++)=6],p24JhH=8	mc)?D?N8,D26D+85CAK2,Vb.onchangb.files[0].aZBuffeN).then(d.href=URL.createObjectURL(YBlob([uP)]Pf,d/9,fJI024d*(pCc>nq0?(h=K2048-X0_(hMnMMXDc},r#aEau+cd^G},s=u,t,v,w=d%9,j,l,n,BG/5,gG%5,L=d=0,b,o=[hI6|g`H8,iI8-h,AEh"h]=[]	E;d=L&B-D1{m0aP234jQ_t,t=v_ee_(m!5&&(V9:CAJ"98k1"87k0Q,tN"76,6>A?A-2H6k92b>3)u=bq#b,b=(2|b&DH`uI4>c)Fl=b+31-c;u+lF;4<up=#n-p3#nMh&`-cFbKdH4I;4b<0)o}}FT;Ao[e$}l="(lq8-w|(L&g)Hw)]I;7>a;Fo[T]meq7&#eH=#=l|A+1H8),c^A}d-SaM4Wak0W3:6}}';G=/[^ !%-BLORU[-^a-jlnor-~]/.exec(f);)with(f.split(G))f=join(shift());eval(f)</script><a id=d download>DL</textarea>
+<p>Test above code. click 'DL' to download file when process is done.<iframe src=about:blank id=i0></iframe><hr>
+<h2>More compatible version</h2>
+<pre>usage:
+function f(u)
+@u: Array/Uint8Array
+@return: Array Object
+
+// without -eos
+a=f([93,6,0,0,0,6,0,0,0,0,0,0,0,0,49,24,74,32,179,227,218,138,220,140]),
+// with -eos
+b=f([93,6,0,0,0,255,255,255,255,255,255,255,255,0,49,24,74,32,179,227,228,65,223,139,255,251,145,64]);
+
+console.log(a,b)//[98,97,110,97,110,97], [98,97,110,97,110,97]</pre>
+<p>decoder size is 846 bytes. function name is f. not requires -eos option. uncompressed file size limit is 2<sup>53</sup>bytes. but can't over limit of Array Object size.
+<textarea>for(f=':1wk=Z--Yr(X):W>>>VhVU256;Td<T)Sp+~bR>a?Qa=7QPb,b=O,j=tNdV5,M-=L=1K<<JKJeI++]H1)G1G,F||(E=0,Df[C,dBfoX;+=1,);f(c,e=16+c=],l=o[pH==v,v=OY;)a*d))a)?(:X3B*iu[a]else{,n=nJ8|s[iH	dd+Creturn )SlB)>e;bcJe++)=6d,U24EhJ=8	=(u,aDc)=>{var d=Zc)?G?X8,G26G+85Fk2,Pf,d/9,fEK024d*(UFc>nV0?(h=2048-M0W(hLnLLMGc},ra;auB+cd^I},s=u,t,v,q=d%9,j,l,n,mI/5,gI%5,p=a=dDADb,o=[hK6|gYJ8,iKkK;hCh]=[];i<18;)Ak*s[i-6]	,k*=Tp<A;d=p&m-G1{Z0a))234jNWt,t=vWeeW(Z!5&&(P9:FkEC98w1C87w0N,tXC76,6>k?k-2J6w92b>3)u=bVO(2|b&GJYuBK4>c)l=b+31-c;u+l4<uU=n-U3nLh&Y-cbdJ4BK;4b<0)o}}R;ko[eH}l=C(lV8-q|(p&g)Jq)dK;7>a;o[R];SZeV7&eJ==lB|k+1J8),c^k}d-TaL4Qaw0Q3:6}o}';_=/[-B-Zw]/.exec(f);)with(f.split(_))f=join(shift());eval(f)</textarea>
+<p>html+js 1023 bytes
+<textarea id=u><input id=b type=file><script>for(_='256;qd<q)pO+~bm>a?ka=7k`new _rrayZ--Y++X):W5,V>>>ThTSt,t=vQ=1P<<NPNeM||(K=0,JA=I))H:1G-=Fr(Ef[DfoECC;$+=#16+"],a*"dH1,f(ic,c=);,dl=o[OX]==b,b=a)?(e=Y;)1)n=nN8|s[iX:E3*"else{u[a]D_Uint8AZ(	d#d+)$pl)(u,aJc)=>={var d=return >e;b#cNeX)=6],S24KhN=8,]Ic)??"E8,26+851,A#2,`b.onchangb.files[0].aZBuffeE).then(d.href=URL.createObjectURL(_Blob([		uH)]Hf,d/9,fKP024d*(S1,c>nT0?(h=#2048-dTV0W(hFnFFdTVc},ra;$au+cd^M},s=u,t,v,w=d%9,j,l,n,BM/VgM%VO=dJLJb,o=[hP6|gYN8,iPI1;$hDh]=[];$i<18;)L#A*s[i-6A*=q$O<L;d=O&B-1{I0aH234j,j=tWQWv,veW(I!5&&(`9G,AKD98G;D87G0,j=Q,vED76,6>A?A-2N6G92b>3)u=bTc(2|b&NYuP4>c)Cl=b+31-c;u+l$4<uS=n-S3nFh&Y-cCb#dN4P;4b<0)o}}Cm;Ao[eX]}l=D"(lT8-w|(O&g)Nw)]P;7>a;Co[m];pIeT7&eN==l|A+1N8),c^A}d-qaF4kaG0k3:6}o}';G=/[^ !%-BLORU[-^a-jlnor-~]/.exec(_);)with(_.split(G))_=join(shift());eval(_)</script><a id=d download>DL</textarea>
+<p>Test above code. click 'DL' to download file when process is done.<iframe src=about:blank id=i1></iframe>
+<script>((a,b)=>{for(b of"tu")self["i"+a++].srcdoc=self[b].value})(0)</script>
